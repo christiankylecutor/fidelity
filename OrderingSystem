@@ -1,0 +1,133 @@
+/**
+* Name: Christian Kyle L. Cutor
+* Section: Fidelity
+* Year/Course: 4 - BSIntech
+*/
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner userInput = new Scanner(System.in);
+
+        int food = 0, snacks = 0,drinks = 0,con = 0, price = 0, total = 0;
+
+        do{
+            System.out.println("==============");
+            System.out.println(" Food Menu: ");
+            System.out.println("==============");
+            System.out.println("1. Pancit Palabok - 60.00");
+            System.out.println("2. Curry - 80.00");
+            System.out.println("3. Lumpia - 50.00");
+            System.out.print("Your order: ");
+            food = userInput.nextInt();
+            System.out.println(" ");
+
+            System.out.println("==============");
+            System.out.println(" Snacks: ");
+            System.out.println("==============");
+            System.out.println("1. French Fries - 25.00");
+            System.out.println("2. Cookies - 30.00");
+            System.out.println("3. Chips - 15.00");
+            System.out.print("Your order: ");
+            snacks = userInput.nextInt();
+            System.out.println(" ");
+
+            System.out.println("==============");
+            System.out.println("Drinks: ");
+            System.out.println("==============");
+            System.out.println("1. Orange Juice - 30.00");
+            System.out.println("2. Iced Tea - 30.00");
+            System.out.println("3. Soft Drinks - 20.00");
+            System.out.println(" ");
+            System.out.print("Your order: ");
+            drinks = userInput.nextInt();
+            System.out.println(" ");
+
+
+            switch(food){
+
+                case 1:
+                    price = 60;
+                    total = price+total;
+                    System.out.println("You ordered: Pancit Palabok"+" - "+price);
+                    break;
+                case 2:
+                    price = 80;
+                    total = price+total;
+                    System.out.println("You ordered: Curry"+" - "+price);
+                    break;
+                case 3:
+                    price = 50;
+                    total = price+total;
+                    System.out.println("You ordered: Lumpia"+" - "+price);
+                    break;
+                default:
+                    System.out.println(" Invalid ");
+            }
+
+
+            switch(snacks){
+
+                case 1:
+                    price = 25;
+                    total = price+total;
+                    System.out.println("You ordered: French Fries"+" - "+price);
+                    break;
+                case 2:
+                    price = 30;
+                    total = price+total;
+                    System.out.println("You ordered: Cookies"+" - "+price);
+                    break;
+                case 3:
+                    price = 15;
+                    total = price+total;
+                    System.out.println("You ordered: Chips"+" - "+price);
+                    break;
+                default:
+                    System.out.println(" Invalid ");
+            }
+
+
+            switch(drinks){
+
+                case 1:
+                    price = 30;
+                    total = price+total;
+                    System.out.println("You ordered: Orange Juice"+" - "+price);
+                    break;
+                case 2:
+                    price = 30;
+                    total = price+total;
+                    System.out.println("You ordered: Iced Tea"+" - "+price);
+                    break;
+                case 3:
+                    price = 20;
+                    total = price+total;
+                    System.out.println("You ordered: Soft Drinks "+" - "+price);
+                    break;
+                default:
+                    System.out.println(" Invalid ");
+
+            }
+            System.out.println(" ");
+            System.out.println("Total Price: "+total);
+            System.out.println(" ");
+
+
+            System.out.println(" You want to add more? [1] - YES or [2] - NO");
+
+                con = userInput.nextInt();
+
+
+        }while (con==1);
+
+
+
+
+
+    }
+}
