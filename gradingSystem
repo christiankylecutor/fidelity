@@ -1,0 +1,44 @@
+/** 
+*Name: Christian Kyle L. Cutor
+    *Section: Fidelity
+    *Course: BSIndTech
+   */
+   
+   import java.util.Scanner;
+
+public class Main{
+
+    public static void main(String[] args) {
+
+        Scanner userInput = new Scanner(System.in);
+
+        String input;
+        int Score;
+        int Grades = 0;
+        int Output;
+        int TotalScore = 0;
+
+
+        do {
+            System.out.println("INPUT A GRADE? ");
+            System.out.print("[Yes] or [No]?:");
+            input = userInput.nextLine();
+            Output = 0;
+
+
+            if (input.equalsIgnoreCase("yes")) {
+                Output += 1;
+                System.out.println("ENTER A GRADE: ");
+                Score = userInput.nextInt();
+                userInput.nextLine();
+                Grades += Score;
+                TotalScore += 1;
+
+            } else if (input.equalsIgnoreCase("no")) {
+                int Total_Averages_Grades = Grades / TotalScore;
+                Output += 0;
+                System.out.println("TOTAL AVERAGE: " + Total_Averages_Grades);
+            }
+        } while (Output == 1);
+    }
+}
